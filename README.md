@@ -1,2 +1,0 @@
-# happiness-store
-happiness-store
