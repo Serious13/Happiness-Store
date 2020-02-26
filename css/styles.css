@@ -1,0 +1,773 @@
+body {
+    margin: 2px;
+    padding:0px;
+    background-color: white;
+    overflow-x:hidden;
+    /*overflow:hidden;
+    overflow-y:hidden;  для вертикального
+    overflow-x:hidden;*/
+}
+header {
+    min-height: 200px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+header .upper-panel {
+    background-color: rgb(244,244,244);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    height: 30px;
+}
+header .upper-panel .list-registration {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0px;
+    align-self: center;
+}
+header .upper-panel .list-registration figure{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0px;
+}
+header .upper-panel .list-registration li{
+
+    border-right: solid grey 1px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header .upper-panel .list-registration li figcaption a{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+header .upper-panel .soc-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    flex-basis: 15%;
+    margin-right: 20px;
+    margin-top: 3px;
+    align-self: flex-start;
+}
+header .search input[type=search]{
+    display: flex;
+    flex-basis: 90%;
+}
+
+header .search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+}
+header .search-bar .contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+header .search-bar .contact .phone-number{
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+header .search-bar .contact .email{
+     margin-left: 0px;
+     display: flex;
+     flex-direction: row;
+ }
+header .search-bar .contact .email svg{
+    margin-right: 2px;
+}
+header .search-bar .search{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    flex-basis: 60%;
+}
+header .search-bar .buy-bar{
+    display: flex;
+    flex-direction: row;
+    border:solid grey;
+}
+header .search-bar .logo  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-basis: 20%;
+}
+header .search-bar .logo .icon-logo {
+    width: 20%;
+    margin-right: 10px;
+
+}
+
+header .search-bar .logo .dreams {
+    font-family: Serif;
+    padding: 15px;
+}
+header .search-bar .search-form {
+    display: flex;
+    flex-direction: row;
+}
+header .search-bar .search-form input[type=button]{
+    border: 0px;
+    background-color: white;
+}
+header .search-bar .search-form input[type=search]{
+    height: 40px;
+}
+header .search-bar .search-form .search-fig{
+    margin:0px;
+    border:solid 1px;
+    display: flex;
+    justify-content: center;
+}
+header .search-bar .search-form .search-fig .search-button{
+    margin: 0px;
+    border:none;
+}
+
+header .buy-bar ul{
+    display:flex;
+    flex-direction: row;
+}
+header .buy-bar .basket-sum{
+    display:flex;
+    flex-direction: row;
+    align-self: center;
+    margin-right: 15px;
+}
+header .buy-bar ul li{
+    display:inline-flex;
+
+}
+header .buy-bar ul .buy-number{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: center;
+}
+header .buy-bar ul li:first-child{
+   border-right: solid rgb(206,206,206);
+}
+
+header .buy-bar .basket-number {
+    position: absolute;
+    top:44px;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    background: rgb(44,29,241);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+}
+
+header .buy-bar .basket-number a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: red;
+}
+
+header .nav-bar ul{
+    list-style: none;
+
+   /* display:flex;
+    flex-direction: row;
+    justify-content:flex-end;;*/
+    padding: 0px;
+    background-color:  rgb(44,29,241);
+}
+header .nav-bar ul{
+    position: relative;
+}
+header .nav-bar ul::after {
+    content: '';
+    display: block;
+    height: 120%;
+
+    width: 100vw;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}
+
+header .nav-bar .wrapper .contacts {
+
+    border-right: 1px solid;
+}
+header .nav-bar .wrapper {
+
+      display: flex;
+      flex-direction: row;
+    
+
+  }
+header .nav-bar .wrapper ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+
+}
+
+header .nav-bar .wrapper li {
+    color: white;
+    border-left:1px solid white;
+    border-right:1px solid white;
+    list-style: none;
+    display:inline-flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content:center;
+}
+header .nav-bar .wrapper li:first-child {
+    
+}
+
+header .nav-bar .wrapper .owl-carousel {
+   
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 70%;
+}
+aside {
+     display: flex;
+     flex-direction: column;
+     flex-basis: 20%;
+     order: -1;
+}
+.main-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+aside h2{
+    margin-top: 0px;
+}
+aside nav ul {
+    list-style: none;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+aside nav ul li h2{
+    background-color: rgb(74,74,74);
+    color: white;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction:row;
+    flex-grow: 1;
+}
+aside nav ul li {
+    background-color: rgb(244,244,244);
+    border: solid rgb(206,206,206);
+    display: flex;
+    flex-direction: column;
+    flex-basis:60px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+aside nav ul li:first-child {
+    border: none;
+    background-color: rgb(74,74,74);
+}
+aside nav ul .home{
+    display: flex;
+    flex-direction: row;
+    margin:5px;
+
+}
+aside nav ul .home svg{
+    margin-right:5px;
+}
+aside nav ul .home figcaption {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+ aside .advertisement {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+main .main-part {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+
+}
+main .main-part figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+main .main-part figure svg {
+   
+}
+main .slider .wrapper {
+    display: flex;
+    align-items: center;
+}
+main .slider {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(206,206,206);
+    
+   
+}
+main .slider .previous {
+
+}
+main .slider .prev-button {
+    border: 0px;
+    background-color: white;
+}
+main .slider .next-button {
+    border: 0px;
+    background-color: white;
+    display: flex;
+    align-self: center;
+}
+main .slider .next {
+    display: flex;
+    align-self: center;
+}
+
+.owl-carousel .owl-stage {
+    display: flex !important;
+}
+
+.owl-carousel .owl-item svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: initial;s
+}
+
+main .slider .disney {
+   
+}
+main .slider .disney-slide {
+   
+}
+main .slider .disney h2{
+    max-height: 100px;
+    display: flex;
+    margin-top: 0px;
+    margin-left:5px;
+}
+main .slider .disney .buy-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+
+}
+main .slider .disney .buy-now{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left:5px;
+
+}
+main .wrapper form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .wrapper .buy{
+    height: 50px;
+    color:rgb(255,130,74);
+    border:1px solid rgb(49,29,241);
+    background-color: white;
+    margin-left:5px;
+}
+
+main .actions  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+main .actions .sale {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid rgb(206,206,206);
+    margin-left: 0px;
+    flex-basis: 33%;
+    height: 86px;
+}
+main .actions .sale .sale-logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+main .actions .sale .sell{
+    margin-left: 5px;
+}
+main .actions .sale .icon-sale{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+main .actions .discount-logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;  
+}
+main .actions .discount {
+    border: 1px solid rgb(206,206,206);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: 33%;
+    height: 86px;
+}
+main .actions .big-sales {
+    margin-left: 5px;
+}
+main .moves {
+    border: 1px solid rgb(206,206,206);
+    flex-basis: 33%;
+    margin-right: 0px;
+}
+main .moves-model {
+    margin-left: 5px;
+}
+main .moves .moves-logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    margin-top: 1.2px;
+}
+main .goods-discount  {
+    display:flex;
+    flex-direction: column;
+}
+main .goods-discount .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+main .new  {
+     display:flex;
+     flex-direction: column;
+     margin-bottom: 40px;
+ }
+main .new h2{
+    padding: 10px;
+    border-bottom: 1px solid rgb(206,206,206);
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+}
+
+
+
+main .new .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+main .new  .items .item {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 350px;
+}
+main .new  .items .card{
+   margin:0px;
+   border:1px solid grey;
+}
+
+main .new  .items .card figcaption{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-basis: 50px;
+    order: 1;
+}
+main .goods-discount {
+    display:flex;
+    flex-direction: column;
+}
+main .goods-discount  .items .card{
+    margin:0px;
+}
+
+main .goods-discount .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+main .goods-discount  .items .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+   
+}
+main .goods-discount h2{
+    padding: 10px;
+    border-bottom: 1px solid rgb(206,206,206);
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+}
+
+main .item .basket{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgb(49,29,241);
+    background-color: rgb(49,29,241);
+    width: 165px;
+}
+
+main .item .bolt{
+    border:1px solid rgb(49,29,241);
+    background-color: rgb(49,29,241);
+}
+main .item .button-bolt{
+    background-color: white;
+    border:0px;
+}
+
+main .item .button-basket{
+    background-color: rgb(49,29,241);
+    color:white;
+    border:0px;
+    padding-left: 0px;
+}
+main .item .forms {
+    display:flex;
+    flex-direction: row;
+    order: 2;
+}
+main .new .new-circle {
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgb(55,164,158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    order:-2;
+}
+main .goods-discount .new-circle {
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgb(255,130,74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    order:-2;
+}
+main .goods-discount figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 90px;
+    order: 1;
+}
+
+main .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(74,74,74);
+    margin: 0 auto;
+    max-width: 1240px;
+    position: relative;
+}
+footer::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}
+footer .footer-info {
+    display: flex;
+    flex-direction: row;
+
+}
+footer .footer-info .menu {
+    font-family: Serif;
+    font-size: 1.4rem;
+    display: inline-flexflex;
+    flex-basis: 20%;
+    list-style: none;
+}
+footer .footer-info .menu li{
+    color: white;
+}
+footer .footer-info .payment-method {
+    font-family: Serif;
+    font-size: 1.4rem;
+    display: flex;
+    flex-basis: 20%;
+}
+footer .footer-info .contact-information {
+    font-family: Serif;
+    font-size: 1.4rem;
+    display: flex;
+    flex-basis: 20%;
+}
+
+
+footer .footer-info .menu li:first-child{
+    border-bottom: 1px solid white;
+}
+footer .footer-info .payment-method  {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+footer .footer-info .payment-method  li{
+    color: white;
+}
+footer .footer-info .payment-method  li:first-child{
+    border-bottom: 1px solid white;
+}
+
+footer .footer-info .contact-information  {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex-basis: 30%;
+
+}
+footer .footer-info .contact-information li{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+footer .footer-info .contact-information  li:first-child{
+    border-bottom: 1px solid white;
+}
+
+footer .footer-info .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    
+}
+footer .footer-info .logo figcaption h3{
+    margin: 0px;
+    margin-top: 15px;
+}
+footer .copyright {
+    display:flex;
+    flex-direction: row;
+   justify-content: center;
+    background-color: black;
+    color: white;
+}
+footer .present-description {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    justify-content: flex-start;
+}
+footer .present-description h3{
+    margin-bottom: 0px;
+}
+
+header .upper-panel::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}
+
+
+/*header .upper-panel::after, header .search-bar::after, .footer .footer-info::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100vw;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    margin: auto;
+    left: -50vw;
+    right: -50vw;
+}*/
+
+
