@@ -1,0 +1,24 @@
+{
+  "name": "happiness-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync": "browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serious13/Happiness-Store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serious13/Happiness-Store/issues"
+  },
+  "homepage": "https://github.com/Serious13/Happiness-Store#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "browsersync": "0.0.1-security"
+  }
+}
