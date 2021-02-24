@@ -1,7 +1,9 @@
 $(document).ready(function(){
-    //$(".owl-carousel").owlCarousel();
+   
 });
-var owl = $(".owl-carousel");
+
+//OWL Carousel
+/*var owl = $(".owl-carousel");
 console.log(owl);
 owl.owlCarousel({
     items:1,
@@ -25,4 +27,4 @@ $('.play').on('click',function(){
 })
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
-})
+})*/

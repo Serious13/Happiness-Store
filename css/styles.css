@@ -241,13 +241,13 @@ header .nav-bar .wrapper li {
     flex-basis: 50%;
     justify-content:center;
 }
-header .nav-bar .wrapper li:first-child {
+/*header .nav-bar .wrapper li:first-child {
     
 }
 
 header .nav-bar .wrapper .owl-carousel {
    
-}
+}*/
 
 main {
     display: flex;
@@ -334,9 +334,7 @@ main .main-part figure {
     margin: 0px;
 }
 
-main .main-part figure svg {
-   
-}
+
 main .slider .wrapper {
     display: flex;
     align-items: center;
@@ -348,9 +346,7 @@ main .slider {
     
    
 }
-main .slider .previous {
 
-}
 main .slider .prev-button {
     border: 0px;
     background-color: white;
@@ -374,15 +370,9 @@ main .slider .next {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: initial;s
+    max-width: initial;
 }
 
-main .slider .disney {
-   
-}
-main .slider .disney-slide {
-   
-}
 main .slider .disney h2{
     max-height: 100px;
     display: flex;
@@ -498,7 +488,6 @@ main .new  {
      margin-bottom: 40px;
  }
 main .new h2{
-    padding: 10px;
     border-bottom: 1px solid rgb(206,206,206);
     display: flex;
     flex-direction: row;
@@ -511,7 +500,6 @@ main .new .items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 main .new  .items .item {
@@ -524,13 +512,31 @@ main .new  .items .card{
    margin:0px;
    border:1px solid grey;
 }
-
+main .new  .items .card-preis{
+    display: flex;
+    flex-direction: row;
+ }
 main .new  .items .card figcaption{
     display: flex;
     flex-direction: column;
     align-self: center;
-    flex-basis: 50px;
+    flex-basis: 60px;
     order: 1;
+}
+main .category .groups {
+    display: flex;
+    flex-direction: column;
+}
+main .groups-checkbox {
+    display: flex;
+}
+main .category ul{
+    padding: 0px 0px 15px 0px;
+    margin: 0px;
+} 
+main .category-new {
+    display: flex;
+    flex-direction: row;
 }
 main .goods-discount {
     display:flex;
@@ -554,7 +560,6 @@ main .goods-discount  .items .item {
    
 }
 main .goods-discount h2{
-    padding: 10px;
     border-bottom: 1px solid rgb(206,206,206);
     display: flex;
     flex-direction: row;
@@ -754,7 +759,12 @@ header .upper-panel::after {
     left: -50vw;
     right: -50vw;
 }
-
+@media (max-width:600px) {
+    #gr {
+        display: grid;
+        color:green;
+    }
+}
 
 /*header .upper-panel::after, header .search-bar::after, .footer .footer-info::after {
     content: '';
