@@ -1,30 +1,21 @@
-$(document).ready(function(){
-   
-});
-
 //OWL Carousel
-/*var owl = $(".owl-carousel");
+var owl = $('.owl-carousel');
 console.log(owl);
-owl.owlCarousel({
-    items:1,
-    center:true,
-    loop:true,
-    margin:10000,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:false
+$(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
 });
-//next.owl.carousel
-console.log($('.old-prev'));
-$('.owl-prev').on('click', function() {
-    owl.trigger('prev.owl.carousel',[1000])
-})
-$('.owl-next').on('click', function() {
-    owl.trigger('next.owl.carousel',[1000])
-})
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})*/

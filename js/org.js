@@ -71,7 +71,6 @@ $(document).ready(
             if (flag == 0) {
                 resultSortDiscount=sortDiscount($price2);
                 $itemPreisDiscount = $('.goods-discount  .card-preis-euro');
-                console.log("matchItemDiscount",flag,resultSortDiscount,$itemPreisDiscount);
                 for (let i=0;i<$itemPreisDiscount.length;i++) {
                     for (let j=0;j<resultSortDiscount.length;j++) {
                         //console.log("comapre"+i+j,$itemPreisDiscount[j].innerHTML,resultSortDiscount[i]);
@@ -87,20 +86,16 @@ $(document).ready(
                 $itemDiscount = [];
                 resultSortDiscount=sortDiscountMax($price2);
                 $itemPreisDiscount = $('.goods-discount  .card-preis-euro');
-                console.log("matchItemDiscount checking",flag,resultSortDiscount,$itemPreisDiscount);
                 for (let i=0;i<$itemPreisDiscount.length;i++) {
                     for (let j=0;j<resultSortDiscount.length;j++) {
-                        console.log("comapre",i,j,$itemPreisDiscount[j].innerHTML,resultSortDiscount[i]);
                         if ($itemPreisDiscount[j].innerHTML == resultSortDiscount[i]) {  
                             $itemDiscount.push($('.goods-discount .item')[j]);
-                            console.log("pushed",$('.goods-discount .item')[1]);
                         }                 
                     }            
                 }
                 return $itemDiscount;
             }
         }
-        console.log("result matchItemDiscount",$itemDiscount);
         var sort = ($price) => {
             var oldPrice = $price[0];
             for (var i=0;i<$price.length;i++) {
@@ -159,13 +154,10 @@ $(document).ready(
         })  
         $priceDiscount.map((index,elem)=>{
             $price2.push(parseInt(elem.innerHTML));
-        })
-        //console.log("sortMax",sortMax($price1));
-        console.log("sortDiscount",sortDiscountMax($price2));
+        })             
         var resultSortNew = [];
         resultSortNew=sort($price1);       
-        resultSortDiscount=sortDiscount($price2);        
-        //console.log("result function sort",resultSortNew,resultSortDiscount); 
+        resultSortDiscount=sortDiscount($price2);                
         //APPENDING
         var $item = $('.item');
         var $itemDiscount = $('.goods-discount .item');
@@ -175,10 +167,16 @@ $(document).ready(
         var $itemNew = [];
         var $itemDiscount = [];
         var flag = 0;
-        console.log("last",$itemDiscount);
+        var clickAmount=0;     
         $("#new-items").append(matchItemNew());
         $("#discount-items").append(matchItemDiscount(flag));
-        $priceInput.click(function() {             
+        $priceInput.click(function() {  
+            console.log(clickAmount,$(this));
+            
+            if ($(this).is(clickAmount)) {
+                console.log("double click should be disabled");
+                $(this).prop("checked",true);
+            }
             if ($(this).prop('id') == "high") {     
                 flag=1;  
                 $("#low").prop("checked",false);
@@ -197,32 +195,7 @@ $(document).ready(
                 $("#new-items").append($itemNew);
                 $("#discount-items").append($itemDiscount);
             }
+            clickAmount=$(this);
         })
-        //console.log("itemPreisNew",$itemPreisNew,resultSortDiscount);
-        
-        
-        /*$priceInput.click(function() {
-            console.log("price is clicked");
-            if (!$(this).prop("checked")) {
-                if ($(this).attr('id') == "new") {
-                    console.log("entered_new");
-                    $(this).parents().find(".new").hide("slow");
-                }
-                if ($(this).attr('id') == "discount") {
-                   console.log("entered_discount")
-                    $(this).parents().find(".goods-discount").hide("slow");
-                }  
-            }
-            else {
-                if ($(this).attr('id') == "new") {
-                    console.log("entered_new");
-                    $(this).parents().find(".new").show();
-                }
-                if ($(this).attr('id') == "discount") {
-                   console.log("entered_discount")
-                    $(this).parents().find(".goods-discount").show();
-                }  
-            }
-        })*/
     }
 )

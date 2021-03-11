@@ -2,17 +2,19 @@ body {
     margin: 2px;
     padding:0px;
     background-color: white;
-    overflow-x:hidden;
-    /*overflow:hidden;
-    overflow-y:hidden;  для вертикального
-    overflow-x:hidden;*/
 }
 header {
     min-height: 200px;
     max-width: 1240px;
     margin: 0 auto;
 }
-
+.fontMain {
+    font-family: NotoSans,Arial,Verdana;
+    font-size: 19px;
+}
+.fontCardPreis {
+    font-size: 15px;
+}
 header .upper-panel {
     background-color: rgb(244,244,244);
     display:flex;
@@ -27,7 +29,9 @@ header .upper-panel .list-registration {
     list-style: none;
     padding-left: 0px;
     align-self: center;
+    cursor:pointer;
 }
+
 header .upper-panel .list-registration figure{
     display: flex;
     flex-direction: row;
@@ -46,8 +50,11 @@ header .upper-panel .list-registration li{
 header .upper-panel .list-registration li figcaption a{
     margin-left: 5px;
     margin-right: 5px;
+    text-decoration: none;
 }
-
+header .upper-panel .list-registration li :hover{
+    color: rgb(44, 29, 241);
+}
 header .upper-panel .soc-bar {
     display: flex;
     flex-direction: row;
@@ -57,6 +64,12 @@ header .upper-panel .soc-bar {
     margin-right: 20px;
     margin-top: 3px;
     align-self: flex-start;
+}
+header .upper-panel .soc-bar a{
+    cursor: poiter;
+}
+header .upper-panel .soc-bar a svg:hover{
+    fill: rgb(44, 29, 241);
 }
 header .search input[type=search]{
     display: flex;
@@ -68,13 +81,13 @@ header .search-bar {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 100px;
+    min-height: 85px;
 }
 header .search-bar .contact{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
+    height: 40px;
 }
 header .search-bar .contact .phone-number{
     margin-left: 0px;
@@ -94,17 +107,24 @@ header .search-bar .search{
     flex-direction: column-reverse;
     justify-content: flex-start;
     flex-basis: 60%;
+    height: 60px;
 }
 header .search-bar .buy-bar{
     display: flex;
     flex-direction: row;
-    border:solid grey;
+    border: 2px solid rgb(149,149,149);
+    margin-top: 10px;
 }
 header .search-bar .logo  {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-basis: 20%;
+    margin: 20px 0px 0px 0px;
+    align-items: center;
+}
+header .search-bar .logo svg {
+    width: 50px;
 }
 header .search-bar .logo .icon-logo {
     width: 20%;
@@ -147,6 +167,8 @@ header .buy-bar .basket-sum{
     flex-direction: row;
     align-self: center;
     margin-right: 15px;
+    color: rgb(44, 29, 241);
+    font-size: 17px;
 }
 header .buy-bar ul li{
     display:inline-flex;
@@ -162,19 +184,27 @@ header .buy-bar ul .buy-number{
 header .buy-bar ul li:first-child{
    border-right: solid rgb(206,206,206);
 }
-
-header .buy-bar .basket-number {
-    position: absolute;
-    top:44px;
+header .buy-bar .basket-number::before {
+    content: '';
+    position: absolute;  
     border-radius: 50%;
     width: 19px;
     height: 19px;
-    background: rgb(44,29,241);
-    color: white;
+    border: 2px solid grey;
+    background: white;
+    z-index: -1;
+}
+header .buy-bar .basket-number {
+    position: absolute;
+    top: 42px;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    background: white;
     display: flex;
     justify-content: center;
+    font-size: 14px;
     align-items: center;
-    align-self: flex-start;
 }
 
 header .buy-bar .basket-number a{
@@ -186,7 +216,6 @@ header .buy-bar .basket-number a{
 
 header .nav-bar ul{
     list-style: none;
-
    /* display:flex;
     flex-direction: row;
     justify-content:flex-end;;*/
@@ -200,7 +229,6 @@ header .nav-bar ul::after {
     content: '';
     display: block;
     height: 120%;
-
     width: 100vw;
     background-color: inherit;
     position: absolute;
@@ -212,16 +240,12 @@ header .nav-bar ul::after {
 }
 
 header .nav-bar .wrapper .contacts {
-
     border-right: 1px solid;
 }
 header .nav-bar .wrapper {
-
       display: flex;
       flex-direction: row;
-    
-
-  }
+}
 header .nav-bar .wrapper ul {
 
     display: flex;
@@ -241,14 +265,6 @@ header .nav-bar .wrapper li {
     flex-basis: 50%;
     justify-content:center;
 }
-/*header .nav-bar .wrapper li:first-child {
-    
-}
-
-header .nav-bar .wrapper .owl-carousel {
-   
-}*/
-
 main {
     display: flex;
     flex-direction: row;
@@ -298,6 +314,10 @@ aside nav ul li {
     align-items: flex-start;
     padding-left: 15px;
 }
+aside nav ul li:hover {
+    color:  rgb(49,29,241);
+    fill: rgb(49,29,241);
+}
 aside nav ul li:first-child {
     border: none;
     background-color: rgb(74,74,74);
@@ -316,8 +336,12 @@ aside nav ul .home figcaption {
     flex-direction: row;
     justify-content: center;
     align-self: center;
+    cursor: pointer;
 }
- aside .advertisement {
+aside nav ul .home figcaption:hover {
+    color:  rgb(49,29,241);
+}
+aside .advertisement {
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -333,7 +357,10 @@ main .main-part figure {
     flex-direction: column;
     margin: 0px;
 }
-
+main .main-part figure img{
+    width: 950px;
+    margin-bottom: 10px;
+}
 
 main .slider .wrapper {
     display: flex;
@@ -343,8 +370,6 @@ main .slider {
     display: flex;
     flex-direction: row;
     border: 1px solid rgb(206,206,206);
-    
-   
 }
 
 main .slider .prev-button {
@@ -422,12 +447,18 @@ main .actions .sale {
     border: 1px solid rgb(206,206,206);
     margin-left: 0px;
     flex-basis: 33%;
-    height: 86px;
+    height: 110%;
 }
 main .actions .sale .sale-logo{
     display: flex;
     flex-direction: row;
     margin-left: 5px;
+}
+main .actions .sale .sale-logo svg{
+    fill:rgb(230,48,96);
+}
+main .actions .sale .sale-logo h2{
+    color: rgb(230,48,96);
 }
 main .actions .sale .sell{
     margin-left: 5px;
@@ -446,6 +477,12 @@ main .actions .discount-logo {
     margin-top: 5px;
     margin-right: 5px;  
 }
+main .actions .discount-logo svg{
+    fill:  rgb(238,92,190);
+}
+main .actions .discount-logo h2{
+    color: rgb(238,92,190);
+}
 main .actions .discount {
     border: 1px solid rgb(206,206,206);
     display: flex;
@@ -453,7 +490,7 @@ main .actions .discount {
     align-items: flex-start;
     justify-content: center;
     flex-basis: 33%;
-    height: 86px;
+    height: 110%;
 }
 main .actions .big-sales {
     margin-left: 5px;
@@ -462,6 +499,7 @@ main .moves {
     border: 1px solid rgb(206,206,206);
     flex-basis: 33%;
     margin-right: 0px;
+    height: 110%;
 }
 main .moves-model {
     margin-left: 5px;
@@ -470,8 +508,17 @@ main .moves .moves-logo{
     display: flex;
     flex-direction: row;
     margin-left: 5px;
-    margin-top: 1.2px;
+    margin-top: 7px;
+    align-items: center;
 }
+main .moves .moves-logo svg{
+    fill: rgb(120,28,67);
+}
+main .moves .moves-logo h2{
+    color: rgb(120,28,67);
+    margin-left: 10px;
+}
+
 main .goods-discount  {
     display:flex;
     flex-direction: column;
@@ -481,48 +528,68 @@ main .goods-discount .items {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
+    column-gap: 40px;
+    row-gap: 10px;
+    justify-content: center;
 }
 main .new  {
      display:flex;
      flex-direction: column;
      margin-bottom: 40px;
- }
+}
+
 main .new h2{
     border-bottom: 1px solid rgb(206,206,206);
     display: flex;
     flex-direction: row;
     width: 98%;
+    justify-content: center;
 }
-
-
 
 main .new .items {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row;   
     flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 10px;
+    justify-content: center;
 }
 
 main .new  .items .item {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 350px;
 }
-main .new  .items .card{
+main .new  .items .card {
    margin:0px;
    border:1px solid grey;
+   position: relative;
+   min-height: 280px;
 }
-main .new  .items .card-preis{
+main .new  .items .card-preis {
     display: flex;
     flex-direction: row;
- }
-main .new  .items .card figcaption{
+    height: 36px;
+    justify-content: center;
+     align-items: center;
+ } 
+ main .new  .items .card-preis div {
+    background-color: #F3F3F3;
+    width: 100px;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
-    align-self: center;
-    flex-basis: 60px;
+    justify-content: center;
+    align-items: center;
+ }
+main .new  .items .card figcaption {
+    display: flex;    
+    flex-direction: column;   
+    justify-content: center;
+    flex-basis: 115px;
     order: 1;
+}
+main .new  .items .card figcaption span:first-child {
+    text-align: center;   
 }
 main .category .groups {
     display: flex;
@@ -538,6 +605,7 @@ main .category ul{
 main .category-new {
     display: flex;
     flex-direction: row;
+    column-gap: 30px;
 }
 main .goods-discount {
     display:flex;
@@ -545,13 +613,15 @@ main .goods-discount {
 }
 main .goods-discount  .items .card{
     margin:0px;
+    position: relative;
 }
 
 main .goods-discount .items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 75px;
+    flex-wrap: wrap;
 }
 
 main .goods-discount  .items .item {
@@ -564,6 +634,7 @@ main .goods-discount h2{
     border-bottom: 1px solid rgb(206,206,206);
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 98%;
 }
 
@@ -574,7 +645,7 @@ main .item .basket{
     align-items: center;
     border:1px solid rgb(49,29,241);
     background-color: rgb(49,29,241);
-    width: 165px;
+    width: 100%;
 }
 
 main .item .bolt{
@@ -596,30 +667,43 @@ main .item .forms {
     display:flex;
     flex-direction: row;
     order: 2;
+    width: 100%;
 }
 main .new .new-circle {
-    position: relative;
+    position: absolute;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background: rgb(55,164,158);
+    width: 25px;
+    height: 25px;
+    background: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-self: flex-start;
-    order:-2;
+    align-items: center;   
+    right: 2px;
+    cursor: pointer;
+}
+main .new .new-circle svg{ 
+    width: 16px;
+}
+main .new .new-circle svg:hover{ 
+    fill:  rgb(49,29,241);
+}
+main figure.card img{
+    width: 200px;
 }
 main .goods-discount .new-circle {
-    position: relative;
+    position: absolute;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background: rgb(255,130,74);
+    width: 25px;
+    height: 25px;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: flex-start;
-    order:-2;
+    right: 2px;
+    cursor: pointer;
+}
+main .goods-discount .new-circle svg:hover{
+    fill: rgb(49,29,241);
 }
 main .goods-discount figcaption {
     display: flex;
@@ -627,6 +711,24 @@ main .goods-discount figcaption {
     justify-content: center;
     flex-basis: 90px;
     order: 1;
+}
+main .goods-discount .items .card figcaption span:first-child {
+    text-align: center;
+}
+main .goods-discount figcaption .card-preis {
+    display: flex;
+    flex-direction: row;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+main .goods-discount figcaption .card-preis div{
+    background-color: #F3F3F3;
+    width: 100px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .card {
@@ -734,7 +836,7 @@ footer .copyright {
     display:flex;
     flex-direction: row;
    justify-content: center;
-    background-color: black;
+    background-color:  rgb(49,29,241);
     color: white;
 }
 footer .present-description {

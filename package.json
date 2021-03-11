@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Serious13/Happiness-Store#readme",
   "dependencies": {
     "browser-sync": "^2.26.13",
-    "browsersync": "0.0.1-security"
+    "browsersync": "0.0.1-security",
+    "owl.carousel": "^2.3.4"
   }
 }
