@@ -39,11 +39,9 @@ header .upper-panel .list-registration figure{
     margin: 0px;
 }
 header .upper-panel .list-registration li{
-
     border-right: solid grey 1px;
     display: flex;
-    flex-direction: row;
-    margin-left: 10px;
+    flex-direction: row;  
     margin-right: 10px;
 }
 
@@ -60,8 +58,7 @@ header .upper-panel .soc-bar {
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    flex-basis: 15%;
-    margin-right: 20px;
+    flex-basis: 15%;   
     margin-top: 3px;
     align-self: flex-start;
 }
@@ -78,8 +75,7 @@ header .search input[type=search]{
 
 header .search-bar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row;  
     align-items: center;
     min-height: 85px;
 }
@@ -88,6 +84,7 @@ header .search-bar .contact{
     flex-direction: row;
     justify-content: flex-start;
     height: 40px;
+    padding-left: 45px;
 }
 header .search-bar .contact .phone-number{
     margin-left: 0px;
@@ -113,7 +110,8 @@ header .search-bar .buy-bar{
     display: flex;
     flex-direction: row;
     border: 2px solid rgb(149,149,149);
-    margin-top: 10px;
+    margin: 10px 0px 0px 70px;
+    height: 60px;
 }
 header .search-bar .logo  {
     display: flex;
@@ -139,6 +137,7 @@ header .search-bar .logo .dreams {
 header .search-bar .search-form {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 header .search-bar .search-form input[type=button]{
     border: 0px;
@@ -196,7 +195,7 @@ header .buy-bar .basket-number::before {
 }
 header .buy-bar .basket-number {
     position: absolute;
-    top: 42px;
+    top: 40px;
     border-radius: 50%;
     width: 19px;
     height: 19px;
@@ -283,6 +282,7 @@ aside {
     justify-content: space-between;
     max-width: 1240px;
     margin: 0 auto;
+    column-gap: 30px;
 }
 
 aside h2{
@@ -295,6 +295,7 @@ aside nav ul {
     flex-direction: column;
     margin-bottom: 0px;
     padding-left: 0px;
+    height: 473px;
 }
 aside nav ul li h2{
     background-color: rgb(74,74,74);
@@ -342,10 +343,22 @@ aside nav ul .home figcaption:hover {
     color:  rgb(49,29,241);
 }
 aside .advertisement {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin: 15px 0px 15px 0px;   
+    display: flex;
+    flex-direction: column;   
+    row-gap: 25px;
 }
-
+aside .advertisement figure{
+    margin: 0;
+    border: 1px solid rgb(74,74,74);
+}
+aside .advertisement figure figcaption {
+    background-color: #F3F3F3;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+}
 main .main-part {
     display: flex;
     flex-direction: column;
@@ -358,7 +371,7 @@ main .main-part figure {
     margin: 0px;
 }
 main .main-part figure img{
-    width: 950px;
+    width: 98.5%;
     margin-bottom: 10px;
 }
 
@@ -436,8 +449,8 @@ main .wrapper .buy{
 main .actions  {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    width: 967px;   
+    margin-top: 4px;
 }
 main .actions .sale {
     display: flex;
@@ -559,6 +572,7 @@ main .new  .items .item {
     display: flex;
     flex-direction: column;
     width: 200px;
+    box-shadow: 1px 1px 7px grey;
 }
 main .new  .items .card {
    margin:0px;
@@ -606,6 +620,7 @@ main .category-new {
     display: flex;
     flex-direction: row;
     column-gap: 30px;
+    width: 980px;
 }
 main .goods-discount {
     display:flex;
@@ -628,7 +643,7 @@ main .goods-discount  .items .item {
     display: flex;
     flex-direction: column;
     border: 1px solid grey;
-   
+    box-shadow: 1px 1px 7px grey;
 }
 main .goods-discount h2{
     border-bottom: 1px solid rgb(206,206,206);
@@ -869,18 +884,20 @@ header .upper-panel::after {
     }
 }
 
-/*header .upper-panel::after, header .search-bar::after, .footer .footer-info::after {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100vw;
-    background-color: inherit;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    margin: auto;
-    left: -50vw;
-    right: -50vw;
-}*/
-
-
+@media (max-width:1270px) {
+    /*header .upper-panel::after {
+        /*width: 120%;
+    }
+    header .nav-bar ul::after {        
+        width: 140vh;       
+    }
+    footer::after {       
+        width: 121vw;
+    }
+    footer .copyright {       
+        width: 110%;
+    }*/
+}
+@media (max-width:1200px) {
+    
+}

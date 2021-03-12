@@ -170,9 +170,7 @@ $(document).ready(
         var clickAmount=0;     
         $("#new-items").append(matchItemNew());
         $("#discount-items").append(matchItemDiscount(flag));
-        $priceInput.click(function() {  
-            console.log(clickAmount,$(this));
-            
+        $priceInput.click(function() {              
             if ($(this).is(clickAmount)) {
                 console.log("double click should be disabled");
                 $(this).prop("checked",true);
